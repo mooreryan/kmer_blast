@@ -1,0 +1,3 @@
+module BlastPagesHelper
+
+end

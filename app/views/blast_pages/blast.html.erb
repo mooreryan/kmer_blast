@@ -1,0 +1,10 @@
+<% provide(:title, 'Kmer Blast') %>
+
+<h1>Kmer Blast</h1>
+
+<%= form_for @sequence do |f| %>
+  <%= f.label :sequence %>
+  <%= f.text_area :header, size: '50x10' %>
+  
+  <%= f.submit 'Submit' %>
+<% end %>
