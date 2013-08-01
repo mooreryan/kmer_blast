@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20130731181826) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,12 @@ ActiveRecord::Schema.define(version: 0) do
     t.string "header_1",  null: false
     t.string "header_2",  null: false
     t.float  "r_squared", null: false
+  end
+
+  create_table "sequences", force: true do |t|
+    t.text     "sequence"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "tetra_infos", id: false, force: true do |t|

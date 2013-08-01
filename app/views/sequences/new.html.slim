@@ -1,0 +1,25 @@
+= provide( :title, 'Magic 4mer Blast' )
+
+h1 Magic 4mer Blast
+
+= form_for @sequence do |f|
+  = f.label :sequence
+  br
+  = f.text_area :sequence, size: '50x10'
+  br
+  = f.label 'kmer size'
+  br
+  = f.label :mer_size_2, '2'
+  = f.radio_button :mer_size, 2
+  = f.label :mer_size_3, '3'
+  = f.radio_button :mer_size, 3
+  = f.label :mer_size_4, '4'
+  = f.radio_button :mer_size, 4
+  = f.label :mer_size_5, '5'
+  = f.radio_button :mer_size, 5
+  br
+  = f.submit 'Submit'
+
+h2 Foo time!
+
+= up 'apple'

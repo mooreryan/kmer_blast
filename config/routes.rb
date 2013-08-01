@@ -1,7 +1,13 @@
 KmerBlast::Application.routes.draw do
+  resources :sequences
+
+  get "sequences/show"
+  get "sequences/edit"
+  get "sequences/index"
+  get "sequences/create"
   match '/blast', to: 'blast_pages#blast', via: [:get, :post]
   match '/tetra_infos', to: 'tetra_infos#new', via: [:get, :post]
-
+  match '/tetra_blast', to: 'sequences#new', via: [:get, :post]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
