@@ -1,4 +1,9 @@
 KmerBlast::Application.routes.draw do
+  get "tetra_infos/new"
+  get "tetra_infos/show"
+  get "tetra_infos/edit"
+  get "tetra_infos/index"
+  get "tetra_infos/create"
   resources :sequences
 
   get "sequences/show"

@@ -5,6 +5,8 @@ gem 'bcrypt-ruby'
 gem 'jquery-rails'
 gem 'd3-rails'
 gem 'slim'
+gem 'parallel'
+gem 'linefit'
 
 group :development, :test do
   gem 'sqlite3'

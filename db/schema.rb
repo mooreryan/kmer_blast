@@ -37,9 +37,10 @@ ActiveRecord::Schema.define(version: 20130731181826) do
   end
 
   create_table "sequences", force: true do |t|
-    t.text     "sequence"
+    t.text     "sequence",             null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "mer_size",   limit: 2, null: false
   end
 
   create_table "tetra_infos", id: false, force: true do |t|

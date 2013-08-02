@@ -1,5 +1,6 @@
-require 'foo'
 require 'tud'
+require 'tetra_info'
+require 'r_squared'
 
 class SequencesController < ApplicationController
   def new
@@ -8,7 +9,8 @@ class SequencesController < ApplicationController
 
   def show
     @sequence = Sequence.find params[:id]
-    @bar = calc_kud @sequence.mer_size.to_i, @sequence.sequence
+    @r_squared_info = TetraInfo.r_squared_info @sequence
+    
   end
 
   def edit

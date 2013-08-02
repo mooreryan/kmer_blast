@@ -28,8 +28,10 @@ describe "Sequences" do
 
     describe 'when something is pasted in' do
       before do 
-        fill_in 'Sequence', with: 'literally anything will work here'
+        fill_in 'Sequence', with: 'actagtacgatcgatcgatcgatgcagcGACGTAGCTGACTGATGTACGTAGCTAGCTAGCTG'
         choose 'sequence_mer_size_4'
+
+        TetraInfo.create header: 'im the header', info: "AAAA=1.5_3_2.0_imthecalcdate"
       end
       
       it 'should create a user' do 

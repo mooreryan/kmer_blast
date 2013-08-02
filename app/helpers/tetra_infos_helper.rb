@@ -1,0 +1,2 @@
+module TetraInfosHelper
+end
